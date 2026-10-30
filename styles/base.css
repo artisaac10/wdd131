@@ -1,7 +1,5 @@
 
-/* =========================
-   Global Styles
-========================= */
+/* Global Styles */
 
 * {
     box-sizing: border-box;
@@ -24,9 +22,7 @@ body {
     background-color: var(--background-color);
 }
 
-/* =========================
-   Header
-========================= */
+/* Header */
 
 header {
     background-color: var(--heading-color);
@@ -41,9 +37,7 @@ header {
     font-weight: 500;
 }
 
-/* =========================
-   Navigation
-========================= */
+/* Navigation */
 
 nav {
     display: flex;
@@ -73,9 +67,7 @@ nav a:focus-visible {
     outline-offset: 3px;
 }
 
-/* =========================
-   Main Content
-========================= */
+/* Main Content */
 
 main {
     max-width: 1024px;
@@ -98,9 +90,7 @@ h1 {
     align-items: stretch;
 }
 
-/* =========================
-   Cards
-========================= */
+/* Cards */
 
 .card {
     min-width: 0;
@@ -128,9 +118,7 @@ h1 {
     margin-top: 8px;
 }
 
-/* =========================
-   About Me
-========================= */
+/* About Me */
 
 .profile-photo {
     float: right;
@@ -188,9 +176,7 @@ h1 {
     line-height: 1.72;
 }
 
-/* =========================
-   Web Development Resources
-========================= */
+/* Web Development Resources */
 
 .resources-card .card-content {
     padding-top: 102px;
@@ -215,9 +201,7 @@ h1 {
     color: #a00000;
 }
 
-/* =========================
-   Footer
-========================= */
+/* Footer */
 
 footer {
     min-height: 71px;
@@ -231,70 +215,7 @@ footer p {
     margin: 2px 0;
 }
 
-.copyright {
-    font-size: 14px;
-}
-
 #lastModified {
     color: #ffff00;
     font-size: 12px;
-}
-
-/* =========================
-   Responsive Design
-========================= */
-
-@media screen and (max-width: 800px) {
-    main {
-        margin: 16px auto;
-        padding: 0 16px;
-    }
-
-    .card-container {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .resources-card .card-content {
-        padding-top: 20px;
-    }
-
-    .location {
-        max-width: 100%;
-        margin-left: 0;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #course-title {
-        font-size: 16px;
-    }
-
-    nav {
-        justify-content: center;
-    }
-
-    nav a {
-        padding: 6px 8px;
-        font-size: 13px;
-    }
-
-    h1 {
-        font-size: 27px;
-    }
-
-    .profile-photo {
-        width: 100px;
-        height: 135px;
-        margin-right: 0;
-    }
-
-    .madagascar-info {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .flag-figure {
-        align-self: center;
-    }
 }
