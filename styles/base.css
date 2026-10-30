@@ -8,13 +8,20 @@
 
 }
 
+:root {
+    --background-color:#ffffff;
+    --text-color:#202124;
+    --border-color: #aaaaaa;
+    --heading-color:#204f70;
+}
+
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     line-height: 1.6;
-    color: #202124;
-    background-color: #ffffff;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 /* =========================
@@ -22,8 +29,8 @@ body {
 ========================= */
 
 header {
-    background-color: #204f70;
-    color: #ffffff;
+    background-color: var(--heading-color);
+    color: var(--background-color);
 }
 
 #course-title {
@@ -50,7 +57,7 @@ nav {
 
 nav a {
     display: block;
-    color: #ffffff;
+    color: var(--background-color);
     text-decoration: none;
     padding: 5px 12px;
     border-radius: 4px;
@@ -60,8 +67,8 @@ nav a {
 
 nav a:hover,
 nav a:focus-visible {
-    background-color: #ffffff;
-    color: #204f70;
+    background-color: var(--background-color);
+    color: var(--heading-color);
     text-decoration: underline;
     outline-offset: 3px;
 }
@@ -97,17 +104,17 @@ h1 {
 
 .card {
     min-width: 0;
-    border: 1px solid #aaaaaa;
+    border: 1px solid var(--border-color);
     border-radius: 9px;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: var(--background-color);
 }
 
 .card h2 {
     margin: 0;
     padding: 10px;
-    background-color: #204f70;
-    color: #ffffff;
+    background-color: var(--heading-color);
+    color: var(--background-color);
     text-align: center;
     font-size: 14px;
     font-weight: 700;
@@ -127,11 +134,11 @@ h1 {
 
 .profile-photo {
     float: right;
-    width: 123px;
-    height: 167px;
+    width: auto;
+    height: 290px;
     object-fit: cover;
     margin: 0 16px 10px 16px;
-    border: 1px solid #aaaaaa;
+    border: 1px solid var(--border-color);
 }
 
 .biography {
@@ -144,65 +151,38 @@ h1 {
     max-width: 376px;
     margin: 10px 0 14px 32px;
     padding-bottom: 4px;
-    border-bottom: 1px solid #bbbbbb;
+    border-bottom: 1px solid var(--border-color);
     text-align: center;
     font-size: 16px;
     font-weight: 600;
 }
 
-/* =========================
-   Madagascar Flag
-========================= */
 
-.madagascar-info {
+.wisconsin {
     display: flex;
     align-items: center;
     gap: 15px;
     margin-top: 12px;
 }
 
-.flag-figure {
+.map {
     flex: 0 0 142px;
     margin: 0;
     text-align: center;
 }
 
-.madagascar-flag {
-    display: flex;
-    width: 142px;
-    height: 85px;
-    overflow: hidden;
-    border: 1px solid #bbbbbb;
+.wisconsin img{
+    height: 300px;
+    width: 250px;
 }
 
-.flag-white {
-    width: 33.333%;
-    background-color: #ffffff;
-}
-
-.flag-right {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-}
-
-.flag-red {
-    flex: 1;
-    background-color: #ff3832;
-}
-
-.flag-green {
-    flex: 0.9;
-    background-color: #00843d;
-}
-
-.flag-figure figcaption {
+.wisconsin figcaption {
     margin-top: 14px;
     font-style: italic;
     line-height: 1.5;
 }
 
-.madagascar-info p {
+.wisconsin p {
     flex: 1;
     margin: 0;
     line-height: 1.72;
@@ -242,8 +222,8 @@ h1 {
 footer {
     min-height: 71px;
     padding: 12px 10px 16px;
-    background-color: #204f70;
-    color: #ffffff;
+    background-color: var(--heading-color);
+    color: var(--background-color);
     text-align: center;
 }
 
