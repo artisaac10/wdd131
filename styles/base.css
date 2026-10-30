@@ -1,0 +1,320 @@
+
+/* =========================
+   Global Styles
+========================= */
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202124;
+    background-color: #ffffff;
+}
+
+/* =========================
+   Header
+========================= */
+
+header {
+    background-color: #204f70;
+    color: #ffffff;
+}
+
+#course-title {
+    display: block;
+    text-align: center;
+    padding: 12px 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* =========================
+   Navigation
+========================= */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 4px 10px;
+    background-color: #333333;
+}
+
+nav a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    transition: background-color 0.25s ease,
+                color 0.25s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: #ffffff;
+    color: #204f70;
+    text-decoration: underline;
+    outline-offset: 3px;
+}
+
+/* =========================
+   Main Content
+========================= */
+
+main {
+    max-width: 1024px;
+    margin: 20px auto 16px;
+    padding: 0;
+}
+
+h1 {
+    margin: 18px 0 16px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 8px;
+    align-items: stretch;
+}
+
+/* =========================
+   Cards
+========================= */
+
+.card {
+    min-width: 0;
+    border: 1px solid #aaaaaa;
+    border-radius: 9px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.card h2 {
+    margin: 0;
+    padding: 10px;
+    background-color: #204f70;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card p {
+    margin-top: 8px;
+}
+
+/* =========================
+   About Me
+========================= */
+
+.profile-photo {
+    float: right;
+    width: 123px;
+    height: 167px;
+    object-fit: cover;
+    margin: 0 16px 10px 16px;
+    border: 1px solid #aaaaaa;
+}
+
+.biography {
+    margin: 8px 0 16px;
+    line-height: 1.75;
+}
+
+.location {
+    clear: both;
+    max-width: 376px;
+    margin: 10px 0 14px 32px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #bbbbbb;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* =========================
+   Madagascar Flag
+========================= */
+
+.madagascar-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 12px;
+}
+
+.flag-figure {
+    flex: 0 0 142px;
+    margin: 0;
+    text-align: center;
+}
+
+.madagascar-flag {
+    display: flex;
+    width: 142px;
+    height: 85px;
+    overflow: hidden;
+    border: 1px solid #bbbbbb;
+}
+
+.flag-white {
+    width: 33.333%;
+    background-color: #ffffff;
+}
+
+.flag-right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.flag-red {
+    flex: 1;
+    background-color: #ff3832;
+}
+
+.flag-green {
+    flex: 0.9;
+    background-color: #00843d;
+}
+
+.flag-figure figcaption {
+    margin-top: 14px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.madagascar-info p {
+    flex: 1;
+    margin: 0;
+    line-height: 1.72;
+}
+
+/* =========================
+   Web Development Resources
+========================= */
+
+.resources-card .card-content {
+    padding-top: 102px;
+}
+
+.resources-card ul {
+    margin: 0;
+    padding-left: 24px;
+}
+
+.resources-card li {
+    margin-bottom: 3px;
+}
+
+.resources-card a {
+    color: #0000cc;
+    text-decoration: underline;
+}
+
+.resources-card a:hover,
+.resources-card a:focus-visible {
+    color: #a00000;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    min-height: 71px;
+    padding: 12px 10px 16px;
+    background-color: #204f70;
+    color: #ffffff;
+    text-align: center;
+}
+
+footer p {
+    margin: 2px 0;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+#lastModified {
+    color: #ffff00;
+    font-size: 12px;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media screen and (max-width: 800px) {
+    main {
+        margin: 16px auto;
+        padding: 0 16px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .resources-card .card-content {
+        padding-top: 20px;
+    }
+
+    .location {
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #course-title {
+        font-size: 16px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 135px;
+        margin-right: 0;
+    }
+
+    .madagascar-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .flag-figure {
+        align-self: center;
+    }
+}

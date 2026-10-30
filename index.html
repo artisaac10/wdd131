@@ -3,9 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <meta name="description" content="WDD 131 | Dynamic Web Fundamentals, Isaac Fischer, My home page for class WDD 131">
+    <meta name="author" content="Isaac Fischer">
+    <title>WDD 131 | Dynamic Web Fundamentals | Isaac Fischer</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
 </head>
+
 <body>
-    <h1>Hello?</h1>
+<header>
+<span id="course-title">
+            WDD 131: Dynamic Web Fundamentals
+</span>
+<nav>
+    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+    <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a>
+
+    <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/26?lang=eng" target="_blank" rel="noopener noreferrer">Scripture</a>
+
+    <a href="#final-project">Final Project</a>
+</nav>
+</header>
+<main>
+<h1>Isaac Fischer</h1>
+<div class="card-container">
+    <section class="card about-card">
+        <h2>About Me</h2>
+
+        <div class="card-content">
+            <img
+                class="profile-photo"
+                src="images/profile.JPEG"
+                alt="Portrait of Isaac"
+            >
+
+            <p class="biography">
+                My name is Isaac and I am a student of WDD 131. I am from Green Bay, Wisconsin.
+                I served a mission in the Fort Lauderdale, Florida mission and having been home for over
+                a year now I am working on getting a degree. I work full time for a company named Valmet where 
+                I work in the spare parts warehouse. I package and send off 100s of part a day. I also am recently 
+                married to the love of my life Secquoia. Our wedding was on June 6th of this year and we were sealed
+                for time and all eternity in the Washington, DC Temple.
+            </p>
+
+            <h3 class="location">Toloria, Madagascar</h3>
+
+            <div class="madagascar-info">
+                <figure class="flag-figure">
+                    <img src="images/wisconsin.png" alt="Map of Wisconsin">
+
+                    <figcaption>
+                        Official Flag of<br>Wisconsin
+                    </figcaption>
+                </figure>
+
+                <p>
+                    Wisconsin is home to many professional sports teams and world champions.
+                    Just recently the Milwaukee Brewers won their first World Series in the 
+                    history of their franchise. Beyond that teams like the Green Bay Packers and 
+                    Milwaukee Bucks have also won championships and have fans around the world. 
+                    Wisconsin is home to great teams, great food, and great fun.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="card resources-card">
+                <h2>Web Dev Resources</h2>
+
+                <div class="card-content">
+                    <ul>
+                        <li>
+                            <a href="https://dev.to/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Dev.to Community
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.smashingmagazine.com/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Smashing Magazine
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://css-tricks.com/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                CSS Tricks
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.w3schools.com/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                W3 Schools
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.udemy.com/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Udemy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://picsum.photos/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Lorem Picsum Image Placeholder
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+</main>
+<footer id="final-project">
+        <p class="copyright">
+            &copy;<span id="currentyear"></span>
+            © Isaac Fischer © Wisconsin
+        </p>
+
+        <p id="lastModified"></p>
+</footer>
 </body>
 </html>
