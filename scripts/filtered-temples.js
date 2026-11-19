@@ -40,21 +40,21 @@ const temples = [
         location: "Rome, Italy",
         dedicated: "2019, March, 10",
         area: 41010,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-lds-224004-wallpaper.jpg"
+        imageUrl: "https://www.churchofjesuschrist.org/media/image/rome-italy-temple-918b10c?lang=eng"
     },
     {
         templeName: "Nauvoo Illinois",
         location: "Nauvoo, Illinois, United States",
         dedicated: "2002, June, 27",
         area: 54000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/nauvoo-illinois/400x250/nauvoo-illinois-temple-lds-224004-wallpaper.jpg"
+        imageUrl: "https://www.churchofjesuschrist.org/imgs/1490bdca1acee69e947c5225f1dac282908c0ac2/full/800%2C/0/default"
     },
     {
         templeName: "Salt Lake City Utah",
         location: "Salt Lake City, Utah, United States",
         dedicated: "1893, April, 6",
         area: 382207,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city/400x250/salt-lake-city-temple-lds-224004-wallpaper.jpg"
+        imageUrl: "https://www.churchofjesuschrist.org/imgs/c8f9e392284fb5ab45815e69507af83d668097bd/full/%2C500/0/default"
     },
     {
         templeName: "Lima Perú",
