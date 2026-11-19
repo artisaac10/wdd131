@@ -41,7 +41,7 @@ const temples = [
         location: "Rome, Italy",
         dedicated: "2019, March, 10",
         area: 41010,
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2a/LDS_Rome_Temple_2.jpg"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4d/RomeTempleatNight.jpg"
     },
     {
         templeName: "Nauvoo Illinois",
