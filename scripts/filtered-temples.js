@@ -1,3 +1,4 @@
+// Temple array
 
 const temples = [
     {
@@ -40,7 +41,7 @@ const temples = [
         location: "Rome, Italy",
         dedicated: "2019, March, 10",
         area: 41010,
-        imageUrl: "https://www.churchofjesuschrist.org/media/image/rome-italy-temple-918b10c?lang=eng"
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2a/LDS_Rome_Temple_2.jpg"
     },
     {
         templeName: "Nauvoo Illinois",
@@ -71,3 +72,174 @@ const temples = [
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     }
 ];
+
+
+// Select HTML elements
+
+const templeContainer = document.querySelector("#temple-container");
+const pageTitle = document.querySelector("#page-title");
+
+
+// Function to create temple cards
+
+function displayTemples(templeList) {
+
+    templeContainer.innerHTML = "";
+
+    templeList.forEach(temple => {
+
+        const card = document.createElement("section");
+        card.classList.add("temple-card");
+
+        const name = document.createElement("h2");
+        name.textContent = temple.templeName;
+
+        const image = document.createElement("img");
+        image.src = temple.imageUrl;
+        image.alt = temple.templeName;
+        image.loading = "lazy";
+
+        const location = document.createElement("p");
+        location.innerHTML = `<strong>Location:</strong> ${temple.location}`;
+
+        const dedicated = document.createElement("p");
+        dedicated.innerHTML = `<strong>Dedicated:</strong> ${temple.dedicated}`;
+
+        const area = document.createElement("p");
+        area.innerHTML = `<strong>Size:</strong> ${temple.area.toLocaleString()} square feet`;
+
+        card.appendChild(name);
+        card.appendChild(image);
+        card.appendChild(location);
+        card.appendChild(dedicated);
+        card.appendChild(area);
+
+        templeContainer.appendChild(card);
+
+    });
+}
+
+
+// Filter functions
+
+function filterTemples(filter) {
+
+    pageTitle.textContent =
+        filter.charAt(0).toUpperCase() + filter.slice(1);
+
+    let filteredTemples = [];
+
+    switch (filter) {
+
+        case "old":
+            filteredTemples = temples.filter(temple => {
+                const year = Number(temple.dedicated.split(",")[0]);
+                return year < 1900;
+            });
+            break;
+
+        case "new":
+            filteredTemples = temples.filter(temple => {
+                const year = Number(temple.dedicated.split(",")[0]);
+                return year > 2000;
+            });
+            break;
+
+        case "large":
+            filteredTemples = temples.filter(temple => {
+                return temple.area > 90000;
+            });
+            break;
+
+        case "small":
+            filteredTemples = temples.filter(temple => {
+                return temple.area < 10000;
+            });
+            break;
+
+        default:
+            filteredTemples = temples;
+    }
+
+    displayTemples(filteredTemples);
+}
+
+
+// Navigation filtering
+
+const navLinks = document.querySelectorAll("#navigation a");
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", event => {
+
+        event.preventDefault();
+
+        const filter = link.dataset.filter;
+
+        filterTemples(filter);
+
+        // Highlight selected navigation link
+
+        navLinks.forEach(navLink => {
+            navLink.classList.remove("active");
+        });
+
+        link.classList.add("active");
+
+        // Close mobile menu
+
+        navigation.classList.remove("open");
+
+        menuButton.textContent = "☰";
+
+        menuButton.setAttribute("aria-expanded", "false");
+
+        menuButton.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+        );
+
+    });
+
+});
+
+
+// Hamburger menu
+
+const menuButton = document.querySelector("#menu-button");
+const navigation = document.querySelector("#navigation");
+
+menuButton.addEventListener("click", () => {
+
+    navigation.classList.toggle("open");
+
+    const isOpen = navigation.classList.contains("open");
+
+    menuButton.textContent = isOpen ? "✕" : "☰";
+
+    menuButton.setAttribute("aria-expanded", isOpen);
+
+    menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+
+});
+
+
+// Dynamic copyright year
+
+document.querySelector("#currentyear").textContent =
+    new Date().getFullYear();
+
+
+// Last modified date
+
+document.querySelector("#lastModified").textContent =
+    "Last Modification: " + document.lastModified;
+
+
+// Display all temples when page loads
+
+displayTemples(temples);
